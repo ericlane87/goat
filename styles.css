@@ -208,6 +208,11 @@ h1 {
   line-height: 1.72;
 }
 
+.hero-text-compact {
+  margin-bottom: 0;
+  max-width: 34rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -244,21 +249,10 @@ h1 {
   border-color: rgba(119, 195, 245, 0.32);
 }
 
-.quick-facts {
+.stacked-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.quick-facts li {
-  padding: 0.8rem 1rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid var(--line);
-  color: #d9e6f4;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .hero-art {
@@ -699,8 +693,7 @@ textarea:focus {
     font-size: 3rem;
   }
 
-  .button,
-  .quick-facts li {
+  .button {
     width: 100%;
   }
 
