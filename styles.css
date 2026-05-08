@@ -467,7 +467,8 @@ label,
   gap: 1rem;
 }
 
-.logo-stage {
+.logo-stage,
+.logo-frame {
   position: relative;
   padding: 1rem;
   border-radius: 2rem;
@@ -479,12 +480,14 @@ label,
   box-shadow: var(--shadow);
 }
 
-.logo-stage img {
+.logo-stage img,
+.logo-frame img {
   width: 100%;
   border-radius: 1.35rem;
 }
 
-.logo-stage-badge {
+.logo-stage-badge,
+.logo-frame-badge {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -500,7 +503,8 @@ label,
   text-transform: uppercase;
 }
 
-.logo-stage-notes {
+.logo-stage-notes,
+.logo-frame-meta {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
@@ -510,7 +514,8 @@ label,
   gap: 0.55rem;
 }
 
-.logo-stage-notes span {
+.logo-stage-notes span,
+.logo-frame-meta span {
   padding: 0.42rem 0.72rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -560,6 +565,27 @@ label,
 
 .section {
   padding: 0 0 3rem;
+}
+
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto 2rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.strip p {
+  margin: 0;
 }
 
 .section-heading {
@@ -957,6 +983,14 @@ textarea:focus {
     width: min(100% - 1.2rem, 1200px);
   }
 
+  .hero {
+    padding-top: 0.7rem;
+  }
+
+  .page-hero {
+    padding-top: 0.7rem;
+  }
+
   .topbar,
   .topbar-links,
   .site-footer {
@@ -964,22 +998,95 @@ textarea:focus {
     align-items: flex-start;
   }
 
+  .topbar {
+    position: static;
+    gap: 0.8rem;
+    padding: 0.9rem;
+    border-radius: 1.25rem;
+  }
+
   .topbar-links {
     width: 100%;
     justify-content: flex-start;
+    gap: 0.45rem;
+  }
+
+  .topbar-links a {
+    width: 100%;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.025);
   }
 
   h1 {
-    font-size: 3.4rem;
+    font-size: clamp(2.8rem, 16vw, 4.1rem);
+    line-height: 0.92;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 10vw, 2.6rem);
+    line-height: 0.98;
+  }
+
+  .page-heading {
+    padding-top: 2rem;
+  }
+
+  .hero-grid {
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero-text,
+  .release-meta,
+  .statement-panel p,
+  .release-panel p,
+  .release-card p,
+  .feature-card p,
+  .form-note,
+  label {
+    line-height: 1.55;
+    font-size: 0.98rem;
+  }
+
+  .hero-actions {
+    margin-bottom: 1rem;
+  }
+
+  .hero-player {
+    max-width: none;
+    padding: 0.85rem;
+    border-radius: 1.2rem;
+  }
+
+  .hero-player h3 {
+    font-size: 1.08rem;
+  }
+
+  .hero-player iframe {
+    min-height: 132px;
+    border-radius: 0.9rem;
+  }
+
+  .hero-player-actions {
+    gap: 0.6rem;
   }
 
   .hero-actions,
-  .stacked-actions {
+  .stacked-actions,
+  .hero-player-actions {
     width: 100%;
   }
 
   .button {
     width: 100%;
+    min-height: 3rem;
+    padding: 0.8rem 1.1rem;
   }
 
   .signal-row,
@@ -989,13 +1096,44 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .logo-stage-notes {
+  .logo-stage-notes,
+  .logo-frame-meta {
     position: static;
     justify-content: flex-start;
     margin-top: 0.8rem;
   }
 
+  .logo-stage,
+  .logo-frame,
+  .panel {
+    border-radius: 1.25rem;
+  }
+
+  .logo-stage-badge,
+  .logo-frame-badge {
+    top: 0.8rem;
+    left: 0.8rem;
+    font-size: 0.72rem;
+  }
+
+  .player-panel iframe {
+    min-height: 300px;
+  }
+
+  .strip {
+    width: min(100% - 1.2rem, 1200px);
+    justify-content: flex-start;
+    border-radius: 1.15rem;
+    padding: 0.8rem 0.9rem;
+    font-size: 0.76rem;
+  }
+
   .booking-modal-panel {
     padding: 1.15rem;
+    border-radius: 1.3rem;
+  }
+
+  .booking-modal {
+    padding: 0.6rem;
   }
 }
