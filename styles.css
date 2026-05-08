@@ -587,11 +587,6 @@ h2 {
   gap: 1.15rem;
 }
 
-.music-grid-home {
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  align-items: stretch;
-}
-
 .player-panel h3,
 .release-panel h3,
 .feature-card h3,
@@ -613,53 +608,11 @@ h2 {
   background: #101214;
 }
 
-.player-panel-home {
-  border-color: rgba(225, 181, 102, 0.28);
-  background:
-    radial-gradient(circle at 16% 16%, rgba(225, 181, 102, 0.12), transparent 22%),
-    radial-gradient(circle at 82% 18%, rgba(121, 200, 255, 0.14), transparent 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 40%),
-    var(--panel-strong);
-}
-
-.player-panel-home iframe {
-  min-height: 430px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
-}
-
 .release-panel {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
-}
-
-.release-panel-home {
-  background:
-    linear-gradient(180deg, rgba(121, 200, 255, 0.08), transparent 36%),
-    var(--panel);
-}
-
-.spotlight-points {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.spotlight-points div {
-  display: grid;
-  gap: 0.15rem;
-  padding-left: 0.95rem;
-  border-left: 2px solid rgba(225, 181, 102, 0.28);
-}
-
-.spotlight-points strong {
-  color: var(--ink);
-  font-size: 0.96rem;
-}
-
-.spotlight-points span {
-  color: var(--muted);
-  line-height: 1.55;
 }
 
 .checklist {
