@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | Suave The Smooth Goat</title>
+  <meta
+    name="description"
+    content="Booking information for Suave The Smooth Goat, including email, social links, Cash App, and an inquiry form."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner-page">
+  <div class="page-shell">
+    <header class="page-hero">
+      <nav class="topbar">
+        <a class="brand-mark" href="index.html">STSG</a>
+        <div class="topbar-links">
+          <a href="index.html">Home</a>
+          <a href="music.html">Music</a>
+          <a href="about.html">About</a>
+          <a class="is-active" href="booking.html">Booking</a>
+        </div>
+      </nav>
+
+      <section class="page-heading">
+        <p class="eyebrow">Booking</p>
+        <h1>Inquiries, business, and content contact</h1>
+        <p class="hero-text">
+          This page gives promoters, collaborators, and media a direct route to the artist.
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="booking-grid">
+          <div class="contact-cards">
+            <article class="panel contact-card">
+              <span class="contact-label">Email</span>
+              <a class="social-link" href="mailto:Suaveallen4@gmail.com">
+                <span class="social-icon" aria-hidden="true">✉</span>
+                <span>Suaveallen4@gmail.com</span>
+              </a>
+            </article>
+
+            <article class="panel contact-card">
+              <span class="contact-label">Vimeo</span>
+              <a class="social-link" href="https://vimeo.com/philly2323x" target="_blank" rel="noreferrer">
+                <span class="social-icon" aria-hidden="true">V</span>
+                <span>@philly2323x</span>
+              </a>
+            </article>
+
+            <article class="panel contact-card">
+              <span class="contact-label">YouTube</span>
+              <a class="social-link" href="https://youtube.com/@suavedasmoothgoat?si=DJgppnsHRm622ST8" target="_blank" rel="noreferrer">
+                <span class="social-icon social-icon-youtube" aria-hidden="true">▶</span>
+                <span>@suavedasmoothgoat</span>
+              </a>
+            </article>
+
+            <article class="panel contact-card">
+              <span class="contact-label">Instagram</span>
+              <a class="social-link" href="https://www.instagram.com/704suaveee?igsh=cGxidTRuYmcxOGFx" target="_blank" rel="noreferrer">
+                <span class="social-icon social-icon-instagram" aria-hidden="true">◎</span>
+                <span>@704suaveee</span>
+              </a>
+            </article>
+
+            <article class="panel contact-card">
+              <span class="contact-label">Cash App</span>
+              <p class="social-link">
+                <span class="social-icon social-icon-cashapp" aria-hidden="true">$</span>
+                <span>$philly2323x</span>
+              </p>
+            </article>
+          </div>
+
+          <form
+            class="panel inquiry-form"
+            action="https://formsubmit.co/Suaveallen4@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Suave The Smooth Goat inquiry">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="Your email" required>
+            </label>
+
+            <label>
+              Inquiry type
+              <select name="inquiry_type" required>
+                <option value="">Select one</option>
+                <option>Performance booking</option>
+                <option>Feature request</option>
+                <option>Interview or media</option>
+                <option>Business collaboration</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="6" placeholder="Tell us about your event, budget, or opportunity." required></textarea>
+            </label>
+
+            <button class="button button-primary" type="submit">Send inquiry</button>
+            <p class="form-note">This form uses FormSubmit, a free email form service that forwards messages to the booking inbox.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Suave The Smooth Goat</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="about.html">About</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
