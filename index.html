@@ -44,7 +44,7 @@
 
           <div class="hero-actions">
             <a class="button button-primary" href="music.html">Press Play</a>
-            <a class="button button-secondary" href="booking.html">Book Suave</a>
+            <button class="button button-secondary" type="button" data-open-booking>Book Suave</button>
           </div>
 
           <p class="hero-text hero-text-compact">
@@ -221,5 +221,86 @@
       </div>
     </footer>
   </div>
+
+  <div class="booking-modal" id="booking-modal" hidden>
+    <div class="booking-modal-backdrop" data-close-booking></div>
+    <div class="booking-modal-panel" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <button class="booking-modal-close" type="button" aria-label="Close booking form" data-close-booking>×</button>
+      <p class="eyebrow">Booking form</p>
+      <h2 id="booking-modal-title">Lock in the inquiry</h2>
+      <p class="booking-modal-copy">
+        Send performance, feature, interview, or business requests here. For the full contact page and all links,
+        hit the booking details page after this.
+      </p>
+
+      <form
+        class="panel inquiry-form booking-modal-form"
+        action="https://formsubmit.co/Suaveallen4@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Suave The Smooth Goat inquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="Your email" required>
+        </label>
+
+        <label>
+          Inquiry type
+          <select name="inquiry_type" required>
+            <option value="">Select one</option>
+            <option>Performance booking</option>
+            <option>Feature request</option>
+            <option>Interview or media</option>
+            <option>Business collaboration</option>
+          </select>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="6" placeholder="Tell us about your event, budget, or opportunity." required></textarea>
+        </label>
+
+        <div class="stacked-actions">
+          <button class="button button-primary" type="submit">Send inquiry</button>
+          <a class="button button-secondary" href="booking.html">Open booking details page</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const bookingModal = document.getElementById("booking-modal");
+    const openBookingButton = document.querySelector("[data-open-booking]");
+    const closeBookingButtons = document.querySelectorAll("[data-close-booking]");
+
+    if (bookingModal && openBookingButton) {
+      const openModal = () => {
+        bookingModal.hidden = false;
+        document.body.classList.add("modal-open");
+      };
+
+      const closeModal = () => {
+        bookingModal.hidden = true;
+        document.body.classList.remove("modal-open");
+      };
+
+      openBookingButton.addEventListener("click", openModal);
+      closeBookingButtons.forEach((button) => button.addEventListener("click", closeModal));
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !bookingModal.hidden) {
+          closeModal();
+        }
+      });
+    }
+  </script>
 </body>
 </html>
