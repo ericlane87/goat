@@ -18,7 +18,12 @@
     <header class="hero">
       <nav class="topbar">
         <a class="brand-mark" href="index.html">STSG</a>
-        <div class="topbar-links">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="topbar-links" id="site-nav">
           <a class="is-active" href="index.html">Home</a>
           <a href="music.html">Music</a>
           <a href="media.html">Media</a>
@@ -46,6 +51,17 @@
           <div class="hero-actions">
             <a class="button button-primary" href="music.html">Listen Now</a>
             <button class="button button-secondary" type="button" data-open-booking>Book Suave</button>
+          </div>
+
+          <div class="hero-socials" aria-label="Social links">
+            <a class="hero-social-link" href="https://www.instagram.com/704suaveee?igsh=cGxidTRuYmcxOGFx" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <span class="social-icon social-icon-instagram" aria-hidden="true">IG</span>
+              <span>Instagram</span>
+            </a>
+            <a class="hero-social-link" href="https://youtube.com/@suavedasmoothgoat?si=DJgppnsHRm622ST8" target="_blank" rel="noreferrer" aria-label="YouTube">
+              <span class="social-icon social-icon-youtube" aria-hidden="true">YT</span>
+              <span>YouTube</span>
+            </a>
           </div>
 
           <div class="hero-player">
@@ -251,31 +267,6 @@
     </div>
   </div>
 
-  <script>
-    const bookingModal = document.getElementById("booking-modal");
-    const openBookingButton = document.querySelector("[data-open-booking]");
-    const closeBookingButtons = document.querySelectorAll("[data-close-booking]");
-
-    if (bookingModal && openBookingButton) {
-      const openModal = () => {
-        bookingModal.hidden = false;
-        document.body.classList.add("modal-open");
-      };
-
-      const closeModal = () => {
-        bookingModal.hidden = true;
-        document.body.classList.remove("modal-open");
-      };
-
-      openBookingButton.addEventListener("click", openModal);
-      closeBookingButtons.forEach((button) => button.addEventListener("click", closeModal));
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !bookingModal.hidden) {
-          closeModal();
-        }
-      });
-    }
-  </script>
+  <script src="site.js"></script>
 </body>
 </html>
