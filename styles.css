@@ -351,6 +351,13 @@ label,
   background: #101214;
 }
 
+.hero-player-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
