@@ -531,9 +531,27 @@ label,
   margin-bottom: 0;
 }
 
+.platform-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.platform-kicker .social-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0.82rem;
+  box-shadow: none;
+}
+
+.platform-kicker span:last-child {
+  line-height: 1;
+}
+
 .hero-art {
   display: grid;
   gap: 1rem;
+  transform: translateY(-24px);
 }
 
 .logo-stage,
@@ -1041,6 +1059,10 @@ textarea:focus {
   .page-heading h1,
   .hero-sidecard h2 {
     max-width: none;
+  }
+
+  .hero-art {
+    transform: none;
   }
 
   .topbar {
